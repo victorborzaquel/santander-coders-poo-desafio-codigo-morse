@@ -1,6 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Traduzir.morse("Me ajuda a traduzir isso para morse"));
-        System.out.println(Traduzir.portugues(".--- --- --- / -.-. --- -. - .- / -.-. --- -- / .- / ... ..- .- / .- .--- ..- -.. .-"));
+        //testes:
+        Tradutor tradutor   = new Tradutor();
+        String emMorse      = ".--- --- .- --- / -.-. --- -. - .- / -.-. --- -- / .- / ... ..- .- / .- .--- ..- -.. .- ! ! !";
+        String emPortugues  = tradutor.traduzirDoMorse(emMorse);
+        String emMorseDnv   = tradutor.traduzirDoPortugues(emPortugues);
+
+        System.out.println(emMorseDnv);
+        System.out.println(emPortugues);
     }
 }
